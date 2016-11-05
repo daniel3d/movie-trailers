@@ -75,4 +75,4 @@ def mistake404(code):
 
 
 webbrowser.open("http://localhost:8888")
-run(port=8888, reloader=True, host='localhost')
+run(port=8888, reloader=False, host='localhost')
