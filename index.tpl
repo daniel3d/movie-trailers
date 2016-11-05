@@ -134,11 +134,20 @@
 
     <!-- Main Page Content -->
     <div class="container">
+        %i = 0
     	%for movie in movies:
-			<div class="col-md-6 col-lg-4 movie-tile text-center" data-id="{{movie.id}}" data-trailer-youtube-id="{{movie.trailer_youtube_id}}" data-story-line="{{movie.storyline}}" data-title="{{movie.title}}" data-toggle="modal" data-target="#trailer" data-poster="{{movie.poster_image_url}}">
+            %i = i + 1
+			%if i > 3:
+                <div class="row">
+            %end
+            <div class="col-md-6 col-lg-4 movie-tile text-center" data-id="{{movie.id}}" data-trailer-youtube-id="{{movie.trailer_youtube_id}}" data-story-line="{{movie.storyline}}" data-title="{{movie.title}}" data-toggle="modal" data-target="#trailer" data-poster="{{movie.poster_image_url}}">
 			    <img src="{{movie.poster_image_url}}" width="220" height="342">
 			    <h2>{{movie.title}}</h2>
 			</div>
+            %if i > 3:
+                %i = 0
+                </div>
+            %end
 		%end
     </div>
 
