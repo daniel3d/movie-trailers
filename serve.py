@@ -1,6 +1,9 @@
 import sqlite3
+import webbrowser
 from media import Movie
 from bottle import route, run, debug, template, request, redirect, static_file, error
+
+debug(False)
 
 @route('/')
 def index_page():
@@ -71,7 +74,5 @@ def mistake404(code):
     return 'Sorry, this page does not exist!'
 
 
-debug(True)
+webbrowser.open("http://localhost:8888")
 run(port=8888, reloader=True, host='localhost')
-# remember to remove reloader=True and debug(True) when you move your
-# application from development to a productive environment
