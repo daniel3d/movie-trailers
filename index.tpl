@@ -87,6 +87,10 @@
             modal.find('form').attr("action", "/");
             modal.find('.modal-title').text('Add New Movie')
             modal.find('button[type="submit"]').text('Save Movie')
+            modal.find('input[name="title"]').attr('value', '');
+            modal.find('textarea[name="story"]').val('');
+            modal.find('input[name="poster"]').attr('value', '');
+            modal.find('input[name="trailer"]').attr('value', '');
         })
         // Update movie
         $(document).on('click', '.edit-movie', function (event) {
