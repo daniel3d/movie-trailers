@@ -4,8 +4,8 @@
 
 #### Installation instructions
 
- *  First make sure you install bottle for python
- * Open the folder \move-trailer folder and run the serve.py file
+ * First make sure you install bottle for python
+ * Open the \move-trailer folder and run the serve.py file
  * Open your web browser and go to http://localhost:8888
  * Enjoy !
 
