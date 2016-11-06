@@ -75,10 +75,16 @@
             })).append('<div class="description"><h2>'+movie.title+buttonDelete+buttonEdit+'</h2><p>'+movie.storyLine+'</p></div>');
         });
         // Animate in the movies when the page loads
-        $(document).ready(function () {
-          $('.movie-tile').hide().first().show("fast", function showNext() {
-            $(this).next("div").show("fast", showNext);
-          });
+        $(document).ready(function () { 
+            var movies = $('.movie-tile').hide();
+            function showNext(i){
+                if(movies.length > i) {
+                    $(movies[i]).show("fast", function (){
+                        showNext(i+1);
+                    });
+                }
+            }
+            showNext(0);
         });
         // Add new movie
         $(document).on('click', '#add-movie', function (event) {
@@ -135,20 +141,24 @@
     <!-- Main Page Content -->
     <div class="container">
         %i = 0
+        %c = 0
     	%for movie in movies:
             %i = i + 1
-			%if i > 3:
+            %c = c + 1
+            %if i > 3 or i == 1:
                 <div class="row">
             %end
-            <div class="col-md-6 col-lg-4 movie-tile text-center" data-id="{{movie.id}}" data-trailer-youtube-id="{{movie.trailer_youtube_id}}" data-story-line="{{movie.storyline}}" data-title="{{movie.title}}" data-toggle="modal" data-target="#trailer" data-poster="{{movie.poster_image_url}}">
-			    <img src="{{movie.poster_image_url}}" width="220" height="342">
-			    <h2>{{movie.title}}</h2>
-			</div>
-            %if i > 3:
+
+            <div class="col-md-6 col-lg-4 movie-tile text-center" data-id="{{movie.id}}" data-trailer-youtube-id="{{movie.trailer_youtube_id}}" data-story-line="{{movie.story}}" data-title="{{movie.title}}" data-toggle="modal" data-target="#trailer" data-poster="{{movie.poster_image_url}}">
+                <img src="{{movie.poster_image_url}}" width="220" height="342">
+                <h2>{{movie.title}}</h2>
+            </div>
+
+            %if i == 3 or c == len(movies):
                 %i = 0
                 </div>
             %end
-		%end
+        %end
     </div>
 
     <!-- Trailer Video Modal -->
