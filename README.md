@@ -27,3 +27,5 @@ python serve.py
  * [Python Bottle](http://bottlepy.org/docs/dev/) For the Web server
  * [Pyhon sqlite3](https://docs.python.org/2/library/sqlite3.html) For storing the movies in movies.db 
  * [Fresh Tomatos](https://github.com/adarsh0806/ud036_StarterCode) Used as a base to expand the functionality of the UI
+ * [PEP8 Autoformat](https://packagecontrol.io/packages/Python%20PEP8%20Autoformat) To format the files in PEP8 requirements
+ * [PEP257 checker](https://pypi.python.org/pypi/pep257) Python docstring style checker

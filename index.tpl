@@ -149,8 +149,8 @@
                 <div class="row">
             %end
 
-            <div class="col-md-6 col-lg-4 movie-tile text-center" data-id="{{movie.id}}" data-trailer-youtube-id="{{movie.trailer_youtube_id}}" data-story-line="{{movie.story}}" data-title="{{movie.title}}" data-toggle="modal" data-target="#trailer" data-poster="{{movie.poster_image_url}}">
-                <img src="{{movie.poster_image_url}}" width="220" height="342">
+            <div class="col-md-6 col-lg-4 movie-tile text-center" data-id="{{movie.id}}" data-trailer-youtube-id="{{movie.trailer}}" data-story-line="{{movie.story}}" data-title="{{movie.title}}" data-toggle="modal" data-target="#trailer" data-poster="{{movie.poster}}">
+                <img src="{{movie.poster}}" width="220" height="342">
                 <h2>{{movie.title}}</h2>
             </div>
 
