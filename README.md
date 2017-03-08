@@ -2,6 +2,8 @@
 
 ## For Udacity Full Stack Web Developer Nanodegree
 
+![screenshot](https://c1.staticflickr.com/4/3755/33203197141_4614e04942_b.jpg)
+
 #### Installation instructions
 
  * First make sure you install bottle for python
